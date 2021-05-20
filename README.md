@@ -1,6 +1,6 @@
 # messio_messaging
 
-Messio is a modern messaging app
+Messio is a modern messaging app built from this tutorial https://medium.com/@adityadroid/60-days-of-flutter-creating-the-app-ea0407b472ae
 
 ## Getting Started
 
