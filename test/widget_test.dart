@@ -12,7 +12,7 @@ import 'package:messio_messaging/main.dart';
 void main() {
   testWidgets('Checking if Hello Word again shows up', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(Messio());
     expect(find.text('Hello Word again'), findsOneWidget);
   });
 }
