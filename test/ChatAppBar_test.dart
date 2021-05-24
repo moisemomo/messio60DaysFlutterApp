@@ -3,9 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:messio_messaging/widgets/ChatAppBar.dart';
 
 void main() {
-   MaterialApp app = MaterialApp(
+   const MaterialApp app = MaterialApp(
     home: Scaffold(
-      body: ChatAppBar(),
+      body: const ChatAppBar(),
     ),
   );
 

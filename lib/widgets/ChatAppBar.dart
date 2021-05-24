@@ -4,7 +4,7 @@ import 'package:messio_messaging/config/Palette.dart';
 
 class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height = 100;
-
+  const ChatAppBar();
 
   @override
   Widget build(BuildContext context) {
@@ -22,73 +22,81 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
           )
         ]),
         child: Container(
+          padding: EdgeInsets.only(top: 10, bottom: 10),
           color: Palette.primaryBackgroundColor,
           child: Row(children: <Widget>[
-            Expanded(flex: 7,
+            Expanded(
+                flex: 7,
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Container(
-                        height: 70 - (width * .06),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Expanded(flex: 2,
-                                child: Center(
-                                  child: Icon(
-                                    Icons.attach_file,
-                                    color: Palette.secondaryColor,
-                                  ),
-                                )
-                            ),
-                            Expanded(flex: 6,
-                                child: Container(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: <Widget>[
-                                      Text('Moise Momo Ndiaye', style: textHeading),
-                                      Text('@moisemomo', style: textStyle)
-                                    ],
-                                  ),
-                                )
-                            )
-                          ],
+                      Expanded(
+                        flex: 7,
+                        child: Container(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(flex: 2,
+                                  child: Center(
+                                    child: IconButton(
+                                      icon:Icon(
+                                      Icons.attach_file,
+                                      color: Palette.secondaryColor,
+                                    )),
+                                  )
+                              ),
+                              Expanded(flex: 6,
+                                  child: Container(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: <Widget>[
+                                        Text('Moise Momo Ndiaye', style: textHeading),
+                                        Text('@moisemomo', style: textStyle)
+                                      ],
+                                    ),
+                                  )
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                      Container(
-                        height: 23,
-                        padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text('Photos', style: textStyle,),
-                            VerticalDivider(
-                              width: 30,
-                              color: Palette.primaryTextColor,
-                            ),
-                            Text('Videos', style: textStyle,
-                            ),
-                            VerticalDivider(
-                              width: 30,
+                      Expanded(
+                        flex: 3,
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Text('Photos', style: textStyle,),
+                              VerticalDivider(
+                                width: 30,
                                 color: Palette.primaryTextColor,
-                            ),
-                            Text('Files', style: textStyle,)
-                          ],
-                        ),
+                              ),
+                              Text('Videos', style: textStyle,
+                              ),
+                              VerticalDivider(
+                                width: 30,
+                                color: Palette.primaryTextColor,
+                              ),
+                              Text('Files', style: textStyle,)
+                            ],
+                          ),
+                        )
                       )
                     ],
                   ),
                 )
             ),
-            Expanded(flex: 3,
+            Expanded(
+                flex: 3,
                 child: Container(
                   child: Center(
                     child: CircleAvatar(
-                      radius: (80 -(width * .06)) / 2,
+                      radius: 30,
                       backgroundImage: Image.asset(
                         Assets.user,
                       ).image,
