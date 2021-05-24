@@ -10,7 +10,6 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     var textHeading = TextStyle(color: Palette.primaryTextColor, fontSize: 20);
     var textStyle = TextStyle(color: Palette.secondaryTextColor);
-    double width = MediaQuery.of(context).size.width;
 
 
     return Material(
@@ -43,7 +42,7 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
                                       icon:Icon(
                                       Icons.attach_file,
                                       color: Palette.secondaryColor,
-                                    )),
+                                    ), onPressed: () {  },),
                                   )
                               ),
                               Expanded(flex: 6,
